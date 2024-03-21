@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  margin: auto;
+  min-height: 100vh;
+  background: #9ea0a5;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/*ag-grid */
+
+.ag-theme-alpine {
+  --ag-foreground-color: #ede1f7;
+  --ag-background-color: #19172d;
+  --ag-header-background-color: #fff;
+
+  --ag-header-foreground-color: #9ea0a5;
+  --ag-odd-row-background-color: #9ea0a5;
+  --ag-header-column-resize-handle-color: rgb(126, 46, 132);
+  --ag-row-hover-color: rgba(255, 255, 255, 0.15);
+  --ag-selected-row-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ag-overlay {
+  color: #3a3b3f;
+  font-weight: 500;
+}
+
+.ag-root-wrapper {
+  background: #fff;
+  border: 1px solid #f5f6fa;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: "100%";
+}
+
+.ag-header-cell-resize {
+  display: none;
+}
+
+.ag-row-even,
+.ag-row-odd {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  color: "red";
+  border-bottom: 0.5px solid rgba(199, 198, 202, 0.24);
+}
+
+/* Hide right header and spacer */
+.ag-pinned-right-header,
+.ag-horizontal-right-spacer {
+  width: 0 !important;
+  min-width: 0 !important;
+}
+.ag-theme-alpine {
+  --ag-checkbox-checked-color: white;
+  --ag-checkbox-unchecked-color: grey;
+  --ag-checkbox-indeterminate-color: grey;
+}
+
+.action-container {
+  background: #018273;
+  right: 0;
+  margin-top: -1px;
+}
+
+.ag-row:hover .action-container {
+  display: block !important;
+}
+
+/* calender */
+
+.fc .fc-toolbar-title {
+  color: #3a3b3f;
+}
+
+.fc .fc-timegrid-axis-cushion,
+.fc .fc-timegrid-slot-label-cushion {
+  color: #3a3b3f;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #3a3b3f;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #3a3b3f;
+}
+
+.fc .fc-button-primary {
+  background-color: #c0e0dc;
+  border: 1px solid #c0e0dc;
+}
+
+.fc .fc-button-primary:hover {
+  background-color: #018273;
+  border: 1px solid #c0e0dc;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #c0e0dc;
+  opacity: 1;
+  border: 1px solid #c0e0dc;
+}
+
+.fc-button {
+  box-shadow: none !important;
+}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child):not(:disabled) {
+  background-color: #018273;
+  border: 1px solid #c0e0dc;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #018273 !important;
+  border: 1px solid #c0e0dc !important;
+}
+
+/* allocated slot */
+
+.allocated-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2px;
+}
+
+.event-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.event-subTitle {
+  font-weight: 500;
+  font-size: 10px;
+  color: #000;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.event-duration {
+  font-weight: 500;
+  font-size: 10px;
+  color: #000;
+  border-radius: 4px;
+}
+
+/* Style for the event container (optional) */
+.fc-event {
+  border: 1px solid #3a3b3f;
+  background-color: #c0e0dc;
+}
+
+/* add task styles */
+
+.scrollable-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+  /* Set the width of the scrollable container */
+  width: fit-content; /* or you can set a fixed width if needed */
+  overflow-x: auto; /* Enable horizontal scrolling when content overflows */
+  white-space: nowrap; /* Prevent content from wrapping to a new line */
+}
+
+.add-task-dashboard .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(158, 160, 165) !important;
+  border-width: 1px !important;
+  width: 200px !important;
+}
+
+.add-task-dashboard .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
+  right: 28px;
+}
+
+.edit-task-dashboard .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(158, 160, 165) !important;
+  border-width: 1px !important;
+}
+
+.avatar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.avatar-button:focus {
+  outline: none;
+}
+.menu {
+  display: none; /* Initially hide the menu */
+  position: absolute;
+  top: 79px; /* Adjust the top position as needed */
+  right: 30px; /* Align the menu to the right of the avatar */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+.menu.show {
+  display: block; /* Show the menu when 'show' class is present */
+}
+/* Add this CSS in your main CSS file or in a style block in your component */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional styles for the close button */
+.modal-content button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* Hide the default checkbox */
+#emailinvite {
+  display: none;
+}
+
+/* Create the custom checkbox appearance with the tick icon using Font Awesome */
+#emailinvite + label {
+  position: relative;
+  padding-left: 30px; /* Space for the custom checkbox */
+  cursor: pointer;
+}
+
+#emailinvite + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #018273; /* Green border */
+  background-color: white; /* White background */
+}
+
+/* Custom checkbox checked style with the tick icon using Font Awesome */
+#emailinvite:checked + label:before {
+  content: "\f00c"; /* Unicode for the tick icon */
+  font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
+  font-weight: 900; /* Adjust font weight to get the appropriate icon */
+  color: white; /* Icon color */
+  text-align: center;
+  line-height: 20px; /* Center the icon vertically */
+  background-color: #018273; /* Green background when checked */
+}
+.row-hover:hover {
+  background-color: #e0e0e0; /* Change this to the desired hover color */
+  cursor: pointer; /* Change cursor style on hover */
+}
