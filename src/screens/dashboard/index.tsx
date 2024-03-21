@@ -16,7 +16,7 @@ import { getDuration } from "../../utils/getDuration";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import Modal from "../../patterns/submitModal";
+import Modal from "../../patterns/SubmitModal";
 import { v4 as uuidv4 } from "uuid";
 import { useGetAllProjects } from "../../hooks/useGetAllProjects";
 
