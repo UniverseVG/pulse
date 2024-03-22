@@ -8,11 +8,11 @@ interface Auth {
 const aws = {
   Auth: {
     region: "ap-south-1",
-    userPoolId: "ap-south-1_JjsQgn3PG",
-    userPoolWebClientId: "4gp6rvig65nqs73i5l17t628rp",
+    userPoolId: "ap-south-1_oLSTHFxKC",
+    userPoolWebClientId: "rqr1fg98ietm36fd12r7co39d",
     mandatorySignIn: false,
     oauth: {
-      domain: "https://project-pulse-dev.auth.ap-south-1.amazoncognito.com",
+      domain: "https://project-timify-dev.auth.ap-south-1.amazoncognito.com",
       scope: [
         "aws.cognito.signin.user.admin",
         "email",
